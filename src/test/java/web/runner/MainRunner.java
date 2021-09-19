@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/cucumber-reports/html-report.html"
         },
-        tags = "@orderPageCT01"
+        tags = "@orderPageCT02"
 )
 
 public class MainRunner {

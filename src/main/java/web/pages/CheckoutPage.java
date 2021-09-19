@@ -27,6 +27,9 @@ public class CheckoutPage {
     @FindBy(id = "finish")
     public WebElement btnFinish;
 
+    @FindBy(xpath = "//h3[@data-test='error']")
+    public WebElement txtError;
+
     public CheckoutPage(){
         PageFactory.initElements(DriverFactory.getInstancia().getDriver(), this);
     }
@@ -45,6 +48,10 @@ public class CheckoutPage {
         return true;
     }
 
+    public boolean isErrorFound(){
+        PageHelper.waitUntilVisibility(txtError, "txtError");
+        return true;
+    }
 
 
 }

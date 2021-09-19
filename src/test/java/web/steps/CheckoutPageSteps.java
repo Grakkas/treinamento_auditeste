@@ -36,7 +36,8 @@ public class CheckoutPageSteps {
 
     @Entao("visualizo a excecao de preenchimento incorreto do formulario")
     public void visualizoAExcecaoDePreenchimentoIncorretoDoFormulario() {
-        //TO-DO: Realizar a logica do cenario
+        Assert.assertTrue(checkoutPage.isErrorFound());
+        Hooks.currentScenario.attach(PageHelper.Takescreenshot(), "image/png", Hooks.currentScenario.getName());
     }
 
     @Quando("finalizar a compra")
