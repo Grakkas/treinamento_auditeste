@@ -1,5 +1,6 @@
 package web.steps;
 
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import model.ClientModel;
 import org.junit.Assert;
@@ -31,6 +32,11 @@ public class CheckoutPageSteps {
         }
         Assert.assertTrue(checkoutPage.fillClientForm(clientModel));
         Hooks.currentScenario.attach(PageHelper.Takescreenshot(), "image/png", Hooks.currentScenario.getName());
+    }
+
+    @Entao("visualizo a excecao de preenchimento incorreto do formulario")
+    public void visualizoAExcecaoDePreenchimentoIncorretoDoFormulario() {
+        //TO-DO: Realizar a logica do cenario
     }
 
     @Quando("finalizar a compra")

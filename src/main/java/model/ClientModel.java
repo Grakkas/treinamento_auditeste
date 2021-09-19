@@ -2,9 +2,9 @@ package model;
 
 public class ClientModel {
 
-    private String nome;
-    private String sobrenome;
-    private String cep;
+    private String nome = "";
+    private String sobrenome = "";
+    private String cep = "";
 
     public ClientModel(String nome, String sobrenome, String cep) {
         setNome(nome);
@@ -17,7 +17,9 @@ public class ClientModel {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if(nome != null) {
+            this.nome = nome;
+        }
     }
 
     public String getSobrenome() {
@@ -25,7 +27,9 @@ public class ClientModel {
     }
 
     public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+        if( sobrenome != null) {
+            this.sobrenome = sobrenome;
+        }
     }
 
     public String getCep() {
@@ -33,6 +37,8 @@ public class ClientModel {
     }
 
     public void setCep(String cep) {
-        this.cep = cep;
+        if(cep != null) {
+            this.cep = cep;
+        }
     }
 }

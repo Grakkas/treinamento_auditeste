@@ -16,3 +16,17 @@
       |Gabriel| Silva   | 01518020|
       E finalizar a compra
       Entao vejo a tela de confirmacao do pedido
+
+    @orderPageCT02
+    Cenario: Deve verificar o erro ao realizar o preenchimento incorreto durante o checkout
+      Dado que sou cliente da sauce demo
+        | usuario       | senha        |
+        | standard_user | secret_sauce |
+      Quando adicionar um produto no meu carrinho
+        | nomeProduto         |
+        | Sauce Labs Backpack |
+      E seguir para o checkout
+      Quando preencher o formulario com as informacoes do cliente
+        |nome   |sobrenome|   cep   |
+        |       | Silva   | 01518020|
+      Entao visualizo a excecao de preenchimento incorreto do formulario
